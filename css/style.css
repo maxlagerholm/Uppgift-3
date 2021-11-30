@@ -18,6 +18,7 @@ body {
   background-repeat: no-repeat;                                   /* Om bilden ska repeteras bredvid varandra */
   background-attachment: scroll;
   background-size: cover;                                         /* Om bilden ska stretchas hela vägen ut till kanten eller inte sträckas */
+  box-shadow: inset 0 0 5rem rgb(0 0 0 / 75%);                    /* Ger en kraftigare skuggning runt bakgrunden än standard */
 }
 
 .bd-placeholder-img {
@@ -70,9 +71,7 @@ body {
 -------------------------------------------------- */
 
 /* Carousel base class */
-.carousel {
-  margin-bottom: 4rem;
-}
+
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   bottom: 3rem;
@@ -84,10 +83,8 @@ body {
   height: 32rem;
 }
 .carousel-item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   height: 32rem;
 }
 
@@ -165,42 +162,66 @@ body {
 /* EGEN CSS  (Kontakt + Modal/Portfolio)
 -------------------------------------------------- */
 
-.contactlink {
+.contactlink {                              /* tar bort länk-dekorationen från länkarna på kontaktsidan */
   text-decoration: none;
   background-color: transparent;
 }
-.contactlink:hover {
+.contactlink:hover {                        /* tar bort länk-dekorationen från länkarna på kontaktsidan */
   text-decoration: none;
   background-color: transparent;
 }
 
-.modallink {
+.contactcontainer {
+  max-width: 510px;
+}
+
+.modallink {                                /* tar bort länk-dekorationen från bilden till att öppna modalen */
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
 }
 
-.modallink:hover {
+.modallink:hover {                          /* tar bort länk-dekorationen från bilden till att öppna modalen */
   text-decoration: none;
   background-color: transparent;
   border-color: transparent;
 }
 
-.modaldesign {
+.modaldesign {                              /* ändrar texten i "namnlisten" på modalen */
   background: transparent;
   color:black;
   text-shadow: none;
 }
 
+.paddingtop {                               /* trycker ner texten som annars är centrerad på startsidan */
+  padding-top: 220px;
+}
 
+.portfoliopaddingtop {
+  padding-top: 40px;
+}
 
+.portfolioclass {
+  max-width: 380px;
+}
 
+.portfoliotext {
+  color: black;
+}
+
+.introtext {                                /* ändrar storleken och tjockleken på headertexten på startsidan */
+  font-weight: 300;
+}
+
+.introp {                                   /* ändrar storleken på paragraftexten på startsidan */
+  font-size: 22px;
+}
 
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (min-width: 40em) {                /* till carusellen */
+@media (min-width: 40em) {                  /* till carusellen */
   /* Bump up size of carousel content */
   .carousel-caption p {
     margin-bottom: 1.25rem;
@@ -208,19 +229,30 @@ body {
     line-height: 1.4;
   }
 
-  .featurette-heading {                   /* till carusellen */
+  .featurette-heading {                     /* till carusellen */
     font-size: 50px;
   }
 }
 
-@media (min-width: 62em) {                /* till carusellen */
+@media (min-width: 62em) {                  /* till carusellen */
   .featurette-heading {
     margin-top: 7rem;
   }
 }
 
-@media (min-width: 768px) {               /* till carusellen */
+@media (min-width: 768px) {                 /* till carusellen */
     .bd-placeholder-img-lg {
       font-size: 3.5rem;
     }
 }
+
+@media (min-width: 576px) {                 /* till modal rutan */
+    .modal-dialog {
+      max-width: 800px;
+    }
+}
+
+
+
+
+/* kolla 1:55 for flickr info */
