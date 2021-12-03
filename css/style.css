@@ -33,7 +33,7 @@ body {
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #333;
-  text-shadow: none;                                            /* prevent inheritance from `body` */
+  text-shadow: none;
 }
 
 .cover-container {
@@ -62,8 +62,6 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
-
 
 
 
@@ -229,16 +227,42 @@ body {
   text-shadow: none;
 }
 
-.cardlink {                                /* tar bort länk-dekorationen från bilden till att öppna modalen */
+.cardlink {                                 /* tar bort länk-dekorationen från bilden till att öppna modalen */
   text-decoration: none;
   color: black;
 }
 
-.cardlink:hover {                          /* tar bort länk-dekorationen från bilden till att öppna modalen */
+.cardlink:hover {                           /* tar bort länk-dekorationen från bilden till att öppna modalen */
   text-decoration: none;
   color: black;
 }
 
+.slogantext {                               /* textstorlek på "slogan" texten efter titeln i portfolion */
+  font-size: 37px;
+}
+
+.imgsize {                                  /* ser till att storleken på bilderna i portfolion är fasta och lägger till en border*/
+  width: 400px;
+  height: 400px;
+  padding: 0px;
+  border: solid 1px #333
+}
+
+.caroimgsize {                              /* gör så att bildens storlek i carusellen anpassar sig till ramen */
+  max-width: 100%;
+}
+
+.imgsize:hover {                            /* lägger till en border när man hover över länken */
+  border: solid 1px #333
+}
+
+.leadpaddleft {                             /* lägger till padding brevid lead texten i portfolion */
+  padding-left: 24px;
+}
+
+.leadpaddright {                            /* lägger till padding brevid lead texten i portfolion */
+  padding-right: 24px;
+}
 
 
 /* RESPONSIVE CSS
@@ -271,9 +295,6 @@ body {
 
 @media (min-width: 576px) {                 /* till modal rutan */
     .modal-dialog {
-      max-width: 800px;
+      min-width: 800px;
     }
 }
-
-
-/* kolla 1:55 for flickr info */
