@@ -194,28 +194,51 @@ body {
 }
 
 .paddingtop {                               /* trycker ner texten som annars är centrerad på startsidan */
-  padding-top: 220px;
+  padding-top: 170px;
 }
 
-.portfoliopaddingtop {
-  padding-top: 40px;
+.paddingcardright {                         /* tar bort padding från höger sida av högra kortet */
+  padding-right: 5px;
+  padding-left: 24px;
 }
 
-.portfolioclass {
-  max-width: 380px;
+.paddingcardleft {                          /* tar bort padding från vänster sida av vänstra kortet */
+  padding-right: 24px;
+  padding-left: 5px;
 }
 
-.portfoliotext {
+.introtext {                                /* ändrar tjockleken på headertexten på startsidan */
+  font-weight: 400;
+}
+
+.introp {                                   /* ändrar storleken och tjockleken på paragraftexten på startsidan */
+  font-size: 22px;
+  font-weight: 350;
+}
+
+.card {
+  border: 1px solid rgb(0 0 0 / 70%);
+}
+
+.cardwidth {
+  width: auto;
+}
+
+.cardtext {
+  color: black;
+  text-shadow: none;
+}
+
+.cardlink {                                /* tar bort länk-dekorationen från bilden till att öppna modalen */
+  text-decoration: none;
   color: black;
 }
 
-.introtext {                                /* ändrar storleken och tjockleken på headertexten på startsidan */
-  font-weight: 300;
+.cardlink:hover {                          /* tar bort länk-dekorationen från bilden till att öppna modalen */
+  text-decoration: none;
+  color: black;
 }
 
-.introp {                                   /* ändrar storleken på paragraftexten på startsidan */
-  font-size: 22px;
-}
 
 
 /* RESPONSIVE CSS
@@ -251,8 +274,6 @@ body {
       max-width: 800px;
     }
 }
-
-
 
 
 /* kolla 1:55 for flickr info */
